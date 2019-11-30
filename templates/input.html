@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>PhoneBuk </title>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+
+    <!-- icon-->
+    <link rel="icon" href="{{ url_for('static', filename = 'img/icon.png') }}" type="image/x-icon">
+    <style type="text/css">
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'signin.css') }}">
+
+</head>
+
+<body>
+
+
+    <form class="form-signin" action="{{ url_for('addrec') }}" method="POST">
+        <img class="mb-4" src="{{ url_for('static', filename = 'img/icon.png') }}" alt="" width="72" height="72">
+        <h2 class="h3 mb-3 font-weight-normal">PhoneBuk</h2>
+        <input type="text" name="nm" class="form-control" placeholder="Enter Name " required autofocus>
+
+        <input type="text" name="nmb" class="form-control" placeholder="Enter Phone No" required>
+        <br>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" value="submit">Submit </button>
+        <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
+    </form>
+
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+    </div>
+
+</body>
+
+</html>

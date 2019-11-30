@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+   <title>PhoneBuk List </title>
+   <!-- Required meta tags always come first -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+
+   <!-- icon-->
+   <link rel="icon" href="{{ url_for('static', filename = 'img/icon.png') }}" type="image/x-icon">
+
+
+</head>
+
+<body>
+   <center>
+      <h1> List of Students </h1>
+      <hr>
+
+     
+      <br>
+
+      <table border=2>
+
+         <thead>
+            <td>Name</td>
+            <td>Number</td>
+
+         </thead>
+
+         {% for row in rows %}
+         <tr>
+            <td>{{row["name"]}}</td>
+            <td>{{row["nmbr"]}} </td>
+         </tr>
+         {% endfor %}
+      </table>
+      <br>
+      <a href="/">Go back to home page</a>
+   </center>
+
+   <!-- jQuery first, then Bootstrap JS. -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+   <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+</body>
+
+</html>
